@@ -1,0 +1,198 @@
+a {
+  text-decoration: none;
+  color: unset !important;
+}
+
+.container {
+  @media (max-width: 960px) {
+    padding: 20px !important;
+  }
+}
+
+#default-layout {
+  background-color: white !important;
+  letter-spacing: 0px !important;
+  line-height: 26px !important;
+  color: #1e2632 !important;
+  overflow-x: hidden;
+}
+
+#shop__layout {
+  background-color: white !important;
+  letter-spacing: 0px !important;
+  line-height: 26px !important;
+  color: #1e2632 !important;
+  overflow-x: hidden;
+}
+
+*::selection {
+  color: #1e2632 !important;
+  background: #f8c422 !important;
+}
+
+.v-btn {
+  text-transform: unset !important;
+  letter-spacing: 0px !important;
+
+  &:not(.v-btn--rounded) {
+    border-radius: 10px !important;
+  }
+}
+
+#user__layout {
+  background-color: #f4f4f4 !important;
+  letter-spacing: 0px !important;
+  line-height: 26px !important;
+  color: #1e2632 !important;
+  overflow-x: hidden;
+
+  .theme--light.v-navigation-drawer:not(.v-navigation-drawer--floating)
+    .v-navigation-drawer__border {
+    background-color: #f4f4f4;
+  }
+
+  .nav__control {
+    background-color: rgb(248, 241, 217) !important;
+    border-left: #f8c422 solid 5px !important;
+
+    .v-list-item__title {
+      color: black !important;
+      font-weight: bold !important;
+    }
+
+    &::before {
+      background: unset !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .v-list-item__title {
+    color: black !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+#main-contact {
+  .v-btn {
+    border-radius: 35px !important;
+  }
+
+  .theme--light.v-input:not(.v-input--is-disabled) input,
+  .theme--light.v-input:not(.v-input--is-disabled) textarea {
+    color: black !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+}
+
+#footer {
+  .v-text-field.v-text-field--solo .v-input__control {
+    min-height: 37px !important;
+    height: 37px !important;
+
+    border-radius: 0 !important;
+  }
+
+  .theme--light.v-input:not(.v-input--is-disabled) input,
+  .theme--light.v-input:not(.v-input--is-disabled) textarea {
+    color: black !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+  }
+}
+
+#short-hero {
+  .v-image__image--cover {
+    background-position: 80% !important;
+  }
+}
+
+#shop-short-hero {
+  .v-image__image--cover {
+    background-position: 80% 80% !important;
+  }
+}
+
+.referee {
+  .v-data-table td {
+    font-size: 0.87rem !important;
+    font-weight: 600 !important;
+  }
+
+  .v-text-field.v-text-field--solo .v-input__control {
+    min-height: 45px !important;
+    height: 45px !important;
+
+    border-radius: 0 !important;
+  }
+
+  .theme--light.v-input:not(.v-input--is-disabled) input,
+  .theme--light.v-input:not(.v-input--is-disabled) textarea {
+    color: black !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+  }
+}
+
+#shop__search__field .v-text-field.v-text-field--solo .v-input__control {
+  min-height: 43px !important;
+  height: 43px !important;
+  font-size: 0.85rem !important;
+  border-radius: 0 !important;
+}
+
+#shop__filter {
+  .v-text-field--outlined > .v-input__control > .v-input__slot {
+    min-height: 30px !important;
+    height: 38px !important;
+    color: black !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+  }
+
+  .v-text-field--outlined fieldset {
+    border: 1px solid rgb(218, 217, 217) !important;
+  }
+
+  .v-input__icon {
+    height: 1px !important;
+  }
+}
+
+#page__spec {
+  .v-text-field--outlined > .v-input__control > .v-input__slot {
+    min-height: 30px !important;
+    height: 38px !important;
+    min-width: 50px !important;
+    width: 50px !important;
+    color: black !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+  }
+}
+
+#price__range {
+  .v-text-field--outlined > .v-input__control > .v-input__slot {
+    min-height: 30px !important;
+    height: 38px !important;
+    min-width: 73px !important;
+    width: 73px !important;
+    color: black !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    border-radius: 0 !important;
+  }
+
+  .v-btn {
+    border-radius: 0 !important;
+  }
+}
+
+.quantity__input .v-text-field--outlined > .v-input__control > .v-input__slot {
+  min-height: 30px !important;
+  height: 46px !important;
+  color: black !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+}

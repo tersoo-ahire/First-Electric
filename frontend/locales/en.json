@@ -1,0 +1,187 @@
+{
+  "header": {
+    "home": "HOME",
+    "power": "POWER",
+    "automation": "AUTOMATION",
+    "ev": "EV INFRASTRUCTURE",
+    "referral": "REFERRAL",
+    "contact": "CONTACT",
+    "services": "SERVICES",
+    "products": "PRODUCTS",
+    "solutions": "SOLUTIONS",
+    "power_assessment": "FREE SOLAR POWER ASSESSMENT",
+    "energy_audit": "ENERGY AUDIT",
+    "equipment_installation": "SOLAR EQUIPMENT INSTALLATION",
+    "motor_installation": "ELECTRIC MOTOR INSTALLATION",
+    "consultation": "ENGINEERING CONSULTATION",
+    "shop": "SHOP"
+  },
+
+  "footer": {
+    "customer_care": "Customer Care",
+    "customer_service": "Customer Service",
+    "shipping_delivery": "Shipping & Delivery",
+    "contact": "Contact",
+    "keep_up_to_date": "Keep up-to-date with the latest news from us by entering your email below"
+  },
+
+  "btn": {
+    "get_in_touch": "GET IN TOUCH",
+    "learn_more": "LEARN MORE",
+    "get_quote": "Get Quote",
+    "register": "REGISTER",
+    "copy": "COPY",
+    "back": "BACK",
+    "subscribe": "Subscribe",
+    "contact_us": "CONTACT US",
+    "sign_in": "Sign in",
+    "start_assessment": "START ASSESSMENT",
+    "make_a_request": "MAKE A REQUEST",
+    "shop_now": "SHOP NOW",
+    "buy_now": "Buy Now",
+    "select": "Select",
+    "selected": "Selected",
+    "sign_up_here": "SIGN UP HERE"
+  },
+
+  "home": {
+    "banner_title_1": "CLEAN, SAFE, <br> RENEWABLE",
+    "banner_title_2": "CHOOSE INNOVATION, <br> CHOOSE LIFE!",
+    "banner_title_3": "SOLAR POWER <br> THAT EVERYONE <br> CAN AFFORD",
+    "banner_subtitle_1": "This is what we offer to every home in the country. Wind, Water, Sun. We chose eco energy",
+    "banner_subtitle_2": "Select Electric Cars and make your contribution to the ecology and life on earth",
+    "banner_subtitle_3": "Enjoy clean and reliable electricity without breaking the bank. Simply pay per kWh for electricity with our prepaid smart meters",
+    "about": "ABOUT US",
+    "about_subtitle_1": "to",
+    "about_subtitle_2": "the people",
+    "about_desc_1": "FirstElectric is a leader in the sustainable energy industry in Nigeria.",
+    "about_desc_2": "Founded in May 2019 in Lagos, Nigeria, First Electric’s vision is to drive wide adoption of sustainable energy solution across Sub-Saharan Africa. Since inception, it has quickly gained a reputation for delivering competitive solutions to customers by deploying state of the art solutions at affordable prices.",
+    "what_we_do": "What we do",
+    "what_we_do_subtitle": "Some of our Services",
+    "power": "Power",
+    "power_desc": "We offer a range of electric power solutions to ensure our customers have access of electric power and the lowest possible cost. We offer Power as a Service solutions (PAAS) and EPC for Utility Power Generation and Captive Power solutions.",
+    "automation": "Automation",
+    "automation_desc": "We provide bespoke automation solutions as well as automation products and services to meet the needs of our customers.",
+    "ev": "<div>EV Services <span class='caption font-weight-bold'>(Electric Vehicles)</span></div>",
+    "ev_desc": "We believe that sustainable transportation through the use of electric vehicles should become mainstream in Africa. We are therefore at the forefront of investment in the EV infrastructure such as charging stations and electric vehicle service workshops to pave the way for mass utilization of EVs.",
+    "why_us": "WHY US",
+    "solar_inverter": "Solar Inverter",
+    "solar_inverter_desc": "Whether you’re a homeowner, business, or nonprofit, electricity costs can make up a large portion of your monthly expenses. Even if you don’t produce 100% of the energy you consume, solar will reduce your utility bills, saving you a lot of money. With the cost of solar becoming more affordable it is now more affordable than ever. Couple this with an inverter system where you are able to store up the solar energy, total freedom for the rest of your life",
+    "contact_1": "Not sure where to start from, chat with one of us, send us a mail",
+    "contact_2": "or call us on"
+  },
+
+  "power": {
+    "banner_title": "We offer sustainable solutions to interrupted power supply",
+    "overview": "OVERVIEW",
+    "overview_title": "Sustainable energy solutions for everyone",
+    "overview_desc": "We offer a range of sustainable energy solutions to meet the needs of our customers in both rural and urban communities. Our Energy as a Service (EaaS) offering allows customers access to reliable electricity without any upfront cost. Customers simply pay for what they consume. Contact us to find out more.",
+    "what_we_offer": "What we offer",
+    "what_we_offer_title": "Solar Offerings",
+    "solar_panel": "Solar Panel",
+    "solar_panel_desc": "Solar tiles are added to the roof of the building thereby making the roof a solar power generating asset that produces enough power to be completely disconnected from the grid.",
+    "solar_roofs": "Solar Roofs",
+    "solar_roofs_desc": "This can be installed to produce electric power to augment or substitute, grid power or diesel/petrol generators.​",
+    "batteries": "Batteries",
+    "batteries_desc": "Providing high quality battery solutions for energy storage which can be used with solar panels or grid connected inverter system.​",
+    "why_choose_us": "Why Choose Us",
+    "services": "SERVICES",
+    "services_desc": "Solar is not just a phase – it’s an aggressively growing alternative as more and more people realize that they can save money every month by using solar panels.",
+    "classes": "CLASSES",
+    "classes_desc": "Before you decide to get a quote for solar panels, there are some important questions you should ask any company you are considering hiring.",
+    "professional_help": "Professional help",
+    "power_quality": "POWER QUALITY",
+    "power_quality_desc": "When businesses wonder if solar is right for them, some of their first questions are, “Will solar affect my power quality?",
+    "inverters": "Inverters"
+  },
+
+  "automation": {
+    "banner_title": "Automation solutions tailored to your needs.",
+    "our": "Our",
+    "automation_devices": "Automation Devices",
+    "fe_series_inverter": "FE Series Inverter",
+    "fe_series_inverter_desc": "We manufacture FE Series inverters with built-in energy management solutions that provide power conditioning ,control and data analytics solution to provide users with reliable power.",
+    "variable_speed_drive": "Variable Speed Drives",
+    "variable_speed_drive_desc": "We provide VSDs from time trusted OEMs such as ABB, Weg, TECO, Danfoss, Siemens",
+    "electric_motors": "Electric Motors",
+    "electric_motors_desc": "We provide electric motors from time trusted OEMs such as ABB, Weg and TECO",
+    "solar_pump_inverter": "Solar Pump Inverter",
+    "solar_pump_inverter_desc": "We provide electric pumps both Surface and Submersible.",
+    "why": "WHY",
+    "why_subtitle": "People Trust Us",
+    "why_desc": "When businesses wonder if solar is right for them, some of their first questions are, “Will solar affect my power quality?” and “Will solar be able to handle my high voltage equipment?”",
+    "support": "24/7 Support",
+    "support_desc": "Our team of engineers are always on standby to provide support to customers. You can reach us via email. Web Chat or telephone.",
+    "affordable_price": "Affordable Price",
+    "affordable_price_desc": "We believe price should not be a barrier towards adoption of sustainable power. Speak to us to understand the various financing schemes available to you.",
+    "durable_product": "Durable Product",
+    "durable_product_desc": "We trust in the quality of our products so we offer up to 5 years unlimited warranty to ensure peace of mind to our customers."
+  },
+
+  "ev": {
+    "banner_title": "We are here to help with your Electric Vehicles.",
+    "title": "Electric Vehicle Workshop",
+    "ev_desc": "With the rise in the use of Electric Vehicles, we are creating a space for its repair and servicing. Rendering the different services to our Clients.",
+    "cs_title": "EV Charging Stations",
+    "cs_desc": "We provide EV charging stations across the country. Look at the map below to find the nearest charging station near you"
+  },
+
+  "referral": {
+    "banner_title": "<div>We value relationship</div> <div>Refer a friend</div>",
+    "referral_title": "Register, Login, Refer",
+    "referral_subtitle": "Join our global referral program and earn money",
+    "form_title": "Join now",
+    "your_referral_code": "Your Referral Code",
+    "share_referral_code": "SHARE REFERRAL CODE"
+  },
+
+  "services": {
+    "banner_title": "<div>We offer solutions to all</div> <div>your power needs</div>",
+    "solar_power_assessment_title": "Free Solar Power Assessment",
+    "solar_power_assessment_desc": "Not sure what capacity of solar power you need for your home or business? Take our free assessment test and find out.",
+    "energy_audit_title": "Request an Energy Audit",
+    "energy_audit_desc": "An energy audit is assessment of your home or business to identify your current energy consumption, inefficiencies and provide recommendations to make your home or business more efficient.",
+    "energy_audit_desc_2": "You should consider an energy audit as a first step on the journey to more sustainable and efficient energy use.",
+    "solar_equipment_title": "Solar equipment installation & repair",
+    "solar_equipment_desc": "Need the services of our expert engineers to install or repair your solar equipment?",
+    "electric_motor_title": "Electric Motor, VFD installation & Maintenance",
+    "electric_motor_desc": "We have several years of experience installing and commissioning electric motors and variable frequency drives of several manufacturer such as ABB, Siemens, TECO etc.",
+    "engineering_consultation_title": "Engineering Consultation",
+    "engineering_consultation_desc": "If you have an idea and need some engineering support. Give us a call. We have in house expertise in electrical engineering, mechanical engineering, design, 3D printing. Etc."
+  },
+
+  "contact": {
+    "banner_title": "You give us a reason to do what we love. Get in touch",
+    "contact_details": "Contact Details",
+    "contact_subtitle": "If you are interested in working with us then please drop us a line, we would love to hear from you.",
+    "drop_us_a_line": "Drop Us a Line"
+  },
+
+  "auth": {
+    "administrative_area": "Administrative Area"
+  },
+
+  "shop": {
+    "banner_title": "Enjoy uninterrupted power supply with your family",
+    "my_cart": "My Cart",
+    "item": "Item",
+    "new_products": "New Products",
+    "best_buy": "Best Buy",
+    "featured_products": "Featured Products"
+  },
+
+  "calculator": {
+    "banner_title": "Battery Load Calculator",
+    "inverter_selection": "Inverter Selection",
+    "capacity_guide": "Capacity Guide",
+    "calculate_power": "Calculate power load for your home",
+    "select_package": "Select a package to see the capacity breakdown",
+    "select_inverter": "Select an inverter capacity",
+    "hybrid_inverter": "Hybrid Inverter",
+    "load_mix": "Inverter Load Mix",
+    "selected_inverter": "The selected inverter can power the following home devices",
+    "fair_usage": "Fair usage applies",
+    "uptime_guide": "Battery Uptime Guide",
+    "uptime_period": "This is the uptime period for the selected inverter based on the device loads and type of battery used"
+  }
+}

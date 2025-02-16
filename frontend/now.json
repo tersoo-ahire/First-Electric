@@ -1,0 +1,11 @@
+{
+  "name": "firstelectric",
+  "version": 2,
+  "alias": [
+    "firstelectric"
+  ],
+  "builds": [{
+    "src": "package.json",
+    "use": "@now/static-build"
+  }]
+}

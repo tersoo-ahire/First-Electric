@@ -1,0 +1,183 @@
+{
+  "header": {
+    "home": "MAISON",
+    "power": "PUISSANCE",
+    "automation": "AUTOMATISATION",
+    "ev": "INFRASTRUCTURE VE",
+    "referral": "PARRAINAGE",
+    "contact": "CONTACT",
+    "services": "PRESTATIONS DE SERVICE",
+    "products": "DES PRODUITS",
+    "power_assessment": "ÉVALUATION GRATUITE DE LA PUISSANCE SOLAIRE",
+    "energy_audit": "AUDIT ÉNERGÉTIQUE",
+    "equipment_installation": "INSTALLATION D'ÉQUIPEMENT SOLAIRE",
+    "motor_installation": "INSTALLATION DU MOTEUR ÉLECTRIQUE",
+    "consultation": "CONSULTATION D'INGÉNIERIE",
+    "shop": "LA BOUTIQUE"
+  },
+
+  "footer": {
+    "customer_care": "Service client",
+    "customer_service": "Service Clients",
+    "shipping_delivery": "Expédition & Livraison",
+    "contact": "Contact",
+    "keep_up_to_date": "Tenez-vous au courant de nos derniers événements et actualités en saisissant votre adresse email ci-dessous."
+  },
+
+  "btn": {
+    "get_in_touch": "ENTRER EN CONTACT",
+    "learn_more": "APPRENDRE PLUS",
+    "get_quote": "Obtenir un devis",
+    "register": "S'INSCRIRE",
+    "copy": "COPIE",
+    "back": "RETOUR",
+    "subscribe": "Souscrire",
+    "contact_us": "CONTACTEZ-NOUS",
+    "sign_in": "se connecter",
+    "start_assessment": "COMMENCER L'ÉVALUATION",
+    "make_a_request": "FAIRE UNE DEMANDE",
+    "shop_now": "ACHETEZ MAINTENANT",
+    "buy_now": "Acheter maintenant",
+    "select": "Sélectionner",
+    "selected": "Sélectionné"
+  },
+
+  "home": {
+    "banner_title_1": "PROPRE, SÛR, <br> RENOUVELABLE",
+    "banner_title_2": "CHOISISSEZ L'INNOVATION, <br> CHOISISSEZ LA VIE!",
+    "banner_subtitle_1": "C'est ce que nous proposons à chaque foyer du pays. Vent, eau, soleil. Nous avons choisi l'éco énergie.",
+    "banner_subtitle_2": "Optez pour des voitures électriques et apportez votre contribution à l'écologie et à la vie sur terre",
+    "about": "À PROPOS DE NOUS",
+    "about_subtitle_1": "à",
+    "about_subtitle_2": "les personnes",
+    "about_desc_1": "FirstElectric est un leader dans le secteur de l'énergie durable au Nigeria.",
+    "about_desc_2": "Fondée en mai 2019 à Lagos, au Nigéria, la vision de First Electric est d'encourager une adoption généralisée de solutions énergétiques durables à travers l'Afrique subsaharienne. Depuis sa création, il a rapidement acquis une réputation de fournisseur de solutions compétitives aux clients en déployant des solutions de pointe à des prix abordables.",
+    "what_we_do": "CE QUE NOUS FAISONS",
+    "what_we_do_subtitle": "Certains de nos services",
+    "power": "Puissance",
+    "power_desc": "Nous proposons une gamme de solutions d'alimentation électrique pour garantir à nos clients un accès à l'énergie électrique au coût le plus bas possible. Nous offrons des solutions d'Energie en tant que Service (EaaS) et EPC pour la production d'électricité et des solutions de production intégrée.",
+    "automation": "Automatisation",
+    "automation_desc": "Nous fournissons des solutions d'automatisation sur mesure ainsi que des produits et services d'automatisation pour répondre aux besoins de nos clients.",
+    "ev": "<div>Services D'atelier VE <span class='caption font-weight-bold'>(véhicules électriques)</span></div>",
+    "ev_desc": "Nous pensons que le transport durable grâce à l'utilisation de véhicules électriques devrait devenir courant en Afrique. Nous sommes donc à la pointe des investissements dans les infrastructures de VE telles que les bornes de recharge et les ateliers d'entretien des véhicules électriques pour ouvrir la voie à une utilisation massive des VE.",
+    "why_us": "POURQUOI NOUS",
+    "solar_inverter": "Onduleur solaire",
+    "solar_inverter_desc": "Que vous soyez propriétaire d'une maison, entreprise ou organisme sans but lucratif, les coûts d'électricité peuvent représenter une grande partie de vos dépenses mensuelles. Même si vous ne produisez pas 100% de l'énergie que vous consommez, l'énergie solaire réduira vos factures d'électricité, vous faisant économiser beaucoup d'argent. Le coût du solaire devenant plus abordable, il est désormais plus abordable que jamais. Ajoutez à cela un système d'onduleur où vous pouvez stocker l'énergie solaire, une liberté totale pour le reste de votre vie",
+    "contact_1": "Vous ne savez pas par où commencer, discutez avec l'un de nous, envoyez-nous un mail",
+    "contact_2": "ou appelez-nous au"
+  },
+
+  "power": {
+    "banner_title": "Nous proposons des solutions durables aux coupures de courant",
+    "overview": "APERÇU",
+    "overview_title": "Nous voyons des choses que les autres ne voient pas",
+    "overview_desc": "Lorsque les entreprises se demandent si le solaire leur convient, certaines de leurs premières questions sont: «Le solaire affectera-t-il la qualité de mon électricité?» et \"Le solaire pourra - t - il gérer mon équipement haute tension ?\"",
+    "what_we_offer": "CE QUE NOUS OFFRONS",
+    "what_we_offer_title": "Liste de puissance",
+    "solar_panel": "Panneau solaire",
+    "solar_panel_desc": "Des tuiles solaires sont ajoutées au toit du bâtiment, faisant ainsi du toit un actif générateur d'énergie solaire qui produit suffisamment d'électricité pour être complètement déconnecté du réseau.",
+    "solar_roofs": "Toits solaires",
+    "solar_roofs_desc": "Celui-ci peut être installé pour produire de l'énergie électrique pour augmenter ou remplacer l'énergie électrique du réseau ou les générateurs diesel / essence.",
+    "batteries": "Batteries",
+    "batteries_desc": "Fournir des solutions de batteries de haute qualité pour le stockage d'énergie, batteries qui peuvent être utilisées avec des panneaux solaires ou un système d'onduleur connecté au réseau.​",
+    "why_choose_us": "Pourquoi nous choisir",
+    "services": "PRESTATIONS DE SERVICE",
+    "services_desc": "Le solaire n'est pas seulement une phase - c'est une alternative à la croissance agressive car de plus en plus de gens réalisent qu'ils peuvent économiser de l'argent chaque mois en utilisant des panneaux solaires.",
+    "classes": "DES CLASSES",
+    "classes_desc": "Avant de décider d'obtenir un devis pour les panneaux solaires, vous devez poser quelques questions importantes à l'entreprise que vous envisagez d'engager",
+    "professional_help": "Aide Professionnelle",
+    "power_quality": "QUALITÉ DE L'ALIMENTATION",
+    "power_quality_desc": "Lorsque les entreprises se demandent si l'énergie solaire leur convient, certaines de leurs premières questions sont les suivantes: «L'énergie solaire affectera-t-elle la qualité de mon électricité?",
+    "inverters": "Onduleur"
+  },
+
+  "automation": {
+    "banner_title": "Solutions d'automatisation adaptées à vos besoins.",
+    "our": "Notre",
+    "automation_devices": "Nos dispositifs d'automatisation",
+    "fe_series_inverter": "Onduleur série FE",
+    "fe_series_inverter_desc": "Nous fabriquons des onduleurs de la série FE avec des solutions intégrées de gestion de l'énergie qui fournissent une solution de conditionnement, de contrôle et d'analyse de données pour fournir aux utilisateurs une alimentation fiable.",
+    "variable_speed_drive": "Variateur électronique de vitesse (VEV)",
+    "variable_speed_drive_desc": "Nous fournissons des VEV provenant de fabricants d'équipement d'origine (OEM) fiables tels que ABB, Weg, TECO, Danfoss, Siemens",
+    "electric_motors": "Moteurs électriques",
+    "electric_motors_desc": "Nous fournissons des moteurs électriques provenant de fabricants d'équipement d'origine (OEM) fiables tels que ABB, Weg et TECO.",
+    "solar_pump_inverter": "Onduleur de pompe solaire",
+    "solar_pump_inverter_desc": "Nous fournissons des pompes électriques de surface et des pompes électriques immergées,",
+    "why": "POURQUOI",
+    "why_subtitle": "Les gens nous font confiance",
+    "why_desc": "Lorsque les entreprises se demandent si le solaire leur convient, certaines de leurs premières questions sont: «Le solaire affectera-t-il la qualité de mon électricité?» et \"Le solaire pourra - t - il gérer mon équipement haute tension ?\"",
+    "support": "Assistance 24/7",
+    "support_desc": "Notre équipe d'ingénieurs est toujours prête à fournir une assistance aux clients. Vous pouvez nous joindre par e-mail. par messagerie instatanée ou par téléphone.",
+    "affordable_price": "Prix ​​abordable",
+    "affordable_price_desc": "Nous pensons que le prix ne devrait pas être un obstacle à l'adoption d'une énergie durable. Contactez-nous pour comprendre les différents modes de financement à votre disposition.",
+    "durable_product": "Produit durable",
+    "durable_product_desc": "Nous faisons confiance à la qualité de nos produits, nous offrons donc jusqu'à 5 ans de garantie illimitée pour assurer la tranquillité d'esprit à nos clients."
+  },
+
+  "ev": {
+    "banner_title": "Nous sommes là pour vous aider avec vos véhicules électriques.",
+    "title": "Atelier de véhicules électriques",
+    "ev_desc": "Avec l'augmentation de l'utilisation des véhicules électriques, nous créons un espace pour leur réparation et leur entretien. Offrir les différents services à nos clients.",
+    "cs_title": "Station de recharge EV",
+    "cs_desc": "First Electric fournit des stations de recharge pour véhicules électriques à travers tout le pays. Regardez la carte ci-dessous et trouvez une station de chargement près de vous."
+  },
+
+  "referral": {
+    "banner_title": "<div>Nous attachons beaucoup d'importance à notre relation avec nos clients</div> <div>Parrainez un ami</div>",
+    "referral_title": "S'inscrire, s'identifier, inviter",
+    "referral_subtitle": "Rejoignez notre programme mondial de parrainage et gagnez de l'argent",
+    "form_title": "Inscrivez-vous maintenant",
+    "your_referral_code": "Votre code de parrainage",
+    "share_referral_code": "PARTAGER LE CODE DE PARRAINAGE"
+  },
+
+  "services": {
+    "banner_title": "<div>Nous offrons des solutions à tous</div> <div>vos besoins en énergie</div>",
+    "solar_power_assessment_title": "Évaluation gratuite de l'énergie solaire",
+    "solar_power_assessment_desc": "Vous n'êtes pas sûr de la capacité d'énergie solaire dont vous avez besoin pour votre maison ou votre entreprise? Faites notre test d'évaluation gratuit et découvrez-le.",
+    "energy_audit_title": "Demander un audit énergétique",
+    "energy_audit_desc": "Un audit énergétique est une évaluation de votre maison ou de votre entreprise pour identifier votre consommation d'énergie actuelle, vos inefficacités et fournir des recommandations pour rendre votre maison ou votre entreprise plus efficace.",
+    "energy_audit_desc_2": "Vous devriez envisager un audit énergétique comme une première étape sur le chemin vers une utilisation de l'énergie plus durable et plus efficace.",
+    "solar_equipment_title": "Installation et réparation d'équipements solaires",
+    "solar_equipment_desc": "Besoin des services de nos ingénieurs experts pour installer ou réparer vos équipements solaires?",
+    "electric_motor_title": "Moteur électrique, installation et maintenance de VFD",
+    "electric_motor_desc": "Nous avons plusieurs années d'expérience dans l'installation et la mise en service de moteurs électriques et de variateurs de fréquence de plusieurs fabricants tels que ABB, Siemens, TECO etc.",
+    "engineering_consultation_title": "Consultation d'ingénierie",
+    "engineering_consultation_desc": "Si vous avez une idée et avez besoin d'une assistance technique. Appelez-nous. Nous avons une expertise interne en génie électrique, génie mécanique, conception, impression 3D. Etc."
+  },
+
+  "contact": {
+    "banner_title": "Vous nous donnez une raison de faire ce que nous aimons. Entrez en contact",
+    "contact_details": "Détails du contact",
+    "contact_subtitle": "Si vous êtes intéressés à travailler avec nous alors s’il vous plaît laissez-nous une ligne, nous aimerions entendre de vous.",
+    "drop_us_a_line": "Laissez-nous une ligne"
+  },
+
+  "auth": {
+    "administrative_area": "Zone administrative"
+  },
+
+  "shop": {
+    "banner_title": "Profitez d'une alimentation électrique ininterrompue avec votre famille",
+    "my_cart": "Mon panier",
+    "item": "Article",
+    "new_products": "Nouveaux produits",
+    "best_buy": "Meilleur achat",
+    "featured_products": "Produits Populaires"
+  },
+
+  "calculator": {
+    "banner_title": "Calculateur de charge de batterie",
+    "inverter_selection": "Choix de l'onduleur",
+    "capacity_guide": "Guide de capacité",
+    "calculate_power": "Calculer la puissance électrique de votre maison",
+    "select_package": "Sélectionnez un package pour voir la répartition de la capacité",
+    "select_inverter": "Sélectionnez une capacité d'onduleur",
+    "hybrid_inverter": "Onduleur hybride",
+    "load_mix": "Mélange de charge de l'onduleur",
+    "selected_inverter": "L'onduleur sélectionné peut alimenter les appareils domestiques suivants",
+    "fair_usage": "Une utilisation équitable s'applique",
+    "uptime_guide": "Guide de disponibilité de la batterie",
+    "uptime_period": "Il s'agit de la période de disponibilité de l'onduleur sélectionné en fonction de la puissance de l'appareil et du type de batterie utilisé"
+  }
+}

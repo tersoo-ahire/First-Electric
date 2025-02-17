@@ -1,30 +1,20 @@
 <template>
   <section>
-    <v-sheet class="pt-8 text-center">
-      <div class="px-4">
-        <v-img :src="product.thumbnail" max-width="150" height="auto" class="mx-auto cursor__pointer"
+    <v-sheet class="pt-8 text-center rounded-lg">
+      <div class="px-5 py-3" style="background-color: lightgray;" :title="`View ${product.name}`">
+        <v-img :src="product.thumbnail" max-width="300" height="auto" class="mx-auto rounded-lg cursor__pointer"
           @click="openProductModal"></v-img>
       </div>
 
       <div class="d-flex flex-column justify-space-between">
-        <div class="px-4">
-          <div :title="product.name" class="title font-weight-bold mt-4 text-truncate">
+        <div class="px-4 pb-4">
+          <div :title="`View ${product.name}`" class="text-left font-weight-bold mt-4 text-truncate cursor__pointer"
+            style="color: #333333; font-size:16px" @click="openProductModal">
             {{ product.name }}
           </div>
-
-          <div class="mt-4 font__12 overview">{{ product.overview }}</div>
-
-          <div class="red--text font-weight-bold title my-5">
+          <div class="text-left" style="color: #C23737; font-size: 14px; font-weight: 600;">
             {{ currency === 'ngn' ? '₦' : '$' }}{{ product.price | currency }}
           </div>
-        </div>
-
-        <div class="d-flex actions__container">
-          <div @click="addToCart(product)" class="action__btn">ADD TO CART</div>
-
-          <v-divider vertical style="background-color: #e0e0e0" />
-
-          <div class="action__btn" @click="openProductModal">VIEW</div>
         </div>
       </div>
     </v-sheet>
@@ -38,8 +28,9 @@
               <v-img :src="product.thumbnail" max-width="100%" height="auto" contain class="rounded-md"></v-img>
             </v-col>
             <v-col cols="12" sm="5" class="d-flex flex-column pa-0">
-              <v-card-title class="font-weight-bold text-h6 text-sm-h5 pa-0 mb-2 text-secondary" style="color: #333333;">{{
-                product.name }}</v-card-title>
+              <v-card-title class="font-weight-bold text-h6 text-sm-h5 pa-0 mb-2 text-secondary"
+                style="color: #333333;">{{
+                  product.name }}</v-card-title>
               <div class="font__12 grey--text text--darken-2 mb-4">{{ product.overview }}</div>
               <div class="mb-4">
                 <div class="font-weight-bold mb-1" style="color: #919191; font-size: 14px;">
@@ -88,23 +79,6 @@
 <style lang="scss" scoped>
 .actions__container {
   border-top: 1px solid #d6d6d6;
-}
-
-.action__btn {
-  height: 47px;
-  text-align: center;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  font-weight: bold;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #F8C422;
-    color: #1E2632;
-  }
 }
 
 .dialog__btn {

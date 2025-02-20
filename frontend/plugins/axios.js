@@ -31,7 +31,7 @@ export default function({ $axios, store, app }) {
 
     if (code !== 200 && code !== 201 && code !== 204) {
       // toast.destroy()
-      toast.error(error.response.data.message)
+      toast.error(error?.response?.data?.message)
     }
   })
 }

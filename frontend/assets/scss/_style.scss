@@ -129,3 +129,44 @@
 .test {
   border: 1px solid red;
 }
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e2e2e2;
+  border-radius: 9999px;
+  padding: 8px;
+  width: fit-content;
+  gap: 12px;
+}
+
+.quantity-display {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333;
+}
+
+.stepper-btn {
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.stepper-btn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  color: #333;
+}

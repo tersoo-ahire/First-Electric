@@ -20,10 +20,6 @@ export const mutations = {
     state.token = payload
   },
 
-  SET_TOKEN: (state, payload) => {
-    state.token = payload
-  },
-
   SET_USER: (state, payload) => {
     state.user = payload
   },
@@ -46,16 +42,32 @@ export const mutations = {
     }
   },
 
-  ADD_TO_CART: (state, { product, quantity }) => {
-    const record = state.cart.find(p => p.id === product._id)
+  ADD_TO_CART(state, { product, quantity }) {
+    const existingItem = state.cart.find(
+      item => item?.product?.id === product?.id
+    )
 
-    if (!record) {
+    if (existingItem) {
+      existingItem.quantity += quantity
+    } else {
       state.cart.push({
-        id: product._id,
+        product: product,
         quantity
       })
-    } else {
-      record.quantity += quantity
+    }
+  },
+
+  UPDATE_CART_QUANTITY(state, { product, quantity }) {
+    const item = state.cart.find(item => item?.product?.id === product?.id)
+    if (item) {
+      item.quantity = quantity
+    }
+  },
+
+  REMOVE_FROM_CART(state, product) {
+    const index = state.cart.findIndex(item => item?.product.id === product?.id)
+    if (index > -1) {
+      state.cart.splice(index, 1)
     }
   },
 
@@ -119,5 +131,21 @@ export const getters = {
 
   errorMessage(state) {
     return state.verificationErrorMessage
+  },
+
+  cartTotal(state) {
+    return state.cart.reduce((total, item) => {
+      const price = item?.product?.price || 0
+      const quantity = item?.quantity || 0
+      return total + price * quantity
+    }, 0)
+  },
+
+  cartCount(state) {
+    return state.cart.reduce((count, item) => count + item?.quantity, 0)
+  },
+
+  isProductInCart: (state) => (productId) => {
+    return state.cart.some(item => item?.product?.id === productId || item?.product?._id === productId);
   }
 }

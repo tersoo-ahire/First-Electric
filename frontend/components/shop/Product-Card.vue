@@ -1,18 +1,34 @@
 <template>
   <section>
     <v-sheet class="pt-8 text-center rounded-lg">
-      <div class="px-5 py-3" style="background-color: lightgray;" :title="`View ${product.name}`">
-        <v-img :src="product.thumbnail" max-width="300" height="auto" class="mx-auto rounded-lg cursor__pointer"
-          @click="openProductModal"></v-img>
+      <div
+        class="px-5 py-3"
+        style="background-color: lightgray;"
+        :title="`View ${product.name}`"
+      >
+        <v-img
+          :src="product.thumbnail"
+          max-width="300"
+          height="auto"
+          class="mx-auto rounded-lg cursor__pointer"
+          @click="openProductModal"
+        ></v-img>
       </div>
 
       <div class="d-flex flex-column justify-space-between">
         <div class="px-4 pb-4">
-          <div :title="`View ${product.name}`" class="text-left font-weight-bold mt-4 text-truncate cursor__pointer"
-            style="color: #333333; font-size:16px" @click="openProductModal">
+          <div
+            :title="`View ${product.name}`"
+            class="text-left font-weight-bold mt-4 text-truncate cursor__pointer"
+            style="color: #333333; font-size:16px"
+            @click="openProductModal"
+          >
             {{ product.name }}
           </div>
-          <div class="text-left" style="color: #C23737; font-size: 14px; font-weight: 600;">
+          <div
+            class="text-left"
+            style="color: #C23737; font-size: 14px; font-weight: 600;"
+          >
             {{ currency === 'ngn' ? '₦' : '$' }}{{ product.price | currency }}
           </div>
         </div>
@@ -20,40 +36,125 @@
     </v-sheet>
 
     <!-- Product Detail Modal -->
-    <v-dialog v-model="productModal" max-width="800">
-      <v-card class="pt-7 pb-3 px-3 pt-lg-10 pb-lg-5 px-lg-5">
+    <v-dialog v-model="productModal" max-width="1000">
+      <v-card
+        class="pt-7 pb-3 px-3 pt-lg-12 pb-lg-7 px-lg-5"
+        style="min-height: 445px;"
+      >
         <v-card-text>
-          <v-row>
-            <v-col cols="12" sm="7" class="d-flex align-center pa-0 pb-3 pb-sm-0 pr-sm-5">
-              <v-img :src="product.thumbnail" max-width="100%" height="auto" contain class="rounded-md"></v-img>
+          <v-row style="min-height: 366px;">
+            <v-col
+              cols="12"
+              sm="7"
+              class="d-flex align-center pa-0 pb-4 pb-sm-0 pr-sm-8"
+            >
+              <v-img
+                :src="product.thumbnail"
+                max-width="100%"
+                height="100%"
+                contain
+                class="rounded-md"
+              ></v-img>
             </v-col>
             <v-col cols="12" sm="5" class="d-flex flex-column pa-0">
-              <v-card-title class="font-weight-bold text-h6 text-sm-h5 pa-0 mb-2 text-secondary"
-                style="color: #333333;">{{
-                  product.name }}</v-card-title>
-              <div class="font__12 grey--text text--darken-2 mb-4">{{ product.overview }}</div>
               <div class="mb-4">
-                <div class="font-weight-bold mb-1" style="color: #919191; font-size: 14px;">
+                <v-card-title
+                  class="font-weight-bold text-h6 text-sm-h5 pa-0 mb-2 text-secondary"
+                  style="color: #333333;"
+                  >{{ product.name }}</v-card-title
+                >
+                <div
+                  class="font-weight-bold mb-1"
+                  style="color: #919191; font-size: 14px;"
+                >
+                  By First Electric
+                </div>
+              </div>
+              <div
+                class="mb-6"
+                style="font-size: 15px; font-weight: 300; color: #333333;"
+              >
+                {{ product.overview }}
+              </div>
+              <div class="mb-6">
+                <div
+                  class="font-weight-bold mb-2"
+                  style="color: #919191; font-size: 14px;"
+                >
+                  How Many
+                </div>
+                <div class="quantity-selector">
+                  <button
+                    class="stepper-btn"
+                    @click="decrease"
+                    :disabled="quantity <= 1"
+                  >
+                    -
+                  </button>
+                  <div class="quantity-display">{{ quantity }}</div>
+                  <button class="stepper-btn" @click="increase">
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="mb-6">
+                <div
+                  class="font-weight-bold mb-1"
+                  style="color: #919191; font-size: 14px;"
+                >
                   Price
                 </div>
                 <div style="color: #57584E; font-size: 16px; font-weight: 600;">
-                  {{ currency === 'ngn' ? '₦' : '$' }}{{ product.price | currency }}
+                  {{ currency === 'ngn' ? '₦' : '$'
+                  }}{{ product.price | currency }}
                 </div>
               </div>
-              <v-card-actions class="d-flex pa-0">
-                <div style="max-width: 90px" class="d-flex">
-                  <div class="quantity__box">{{ quantity }}</div>
 
-                  <div class="d-flex flex-column">
-                    <v-btn @click="inc" outlined small color="grey" class="inc__btn">+</v-btn>
-                    <v-btn @click="dec" outlined small color="grey" class="inc__btn">-</v-btn>
+              <div style="display: flex; flex-direction: column; gap: 0;">
+                <!-- Add this condition to show "Item already added" message -->
+                <p
+                  v-if="isProductInCart(product.id)"
+                  class=""
+                  style="color: #C23737; font-weight: 600; font-size: 12px;"
+                >
+                  Item already added to cart
+                </p>
+                <v-card-actions class="d-flex pa-0">
+                  <div style="width: 100%">
+                    <v-btn
+                      color="primary"
+                      height="100%"
+                      @click="addToCart(product)"
+                      depressed
+                      class="secondary--text font-weight-bold px-4 py-4"
+                      style="font-size: 14px;"
+                    >
+                      {{
+                        isProductInCart(product.id)
+                          ? 'Update Cart'
+                          : 'Add to Cart'
+                      }}
+                    </v-btn>
+                    <v-btn
+                      v-if="!isCartEmpty"
+                      @click="
+                        productModal = false
+                        showCart = true
+                      "
+                      height="100%"
+                      depressed
+                      class="secondary--text font-weight-bold px-4 py-4 ml-4"
+                      style="
+                      border: 1px solid rgba(0, 0, 0, .05);
+                      background: #fafafa;
+                      color: #57584e;
+                      font-size: 14px;"
+                    >
+                      View Cart
+                    </v-btn>
                   </div>
-                </div>
-                <div style="width: 100%" class="ml-4">
-                  <v-btn color="primary" height="100%" @click="addToCart(product)" depressed
-                    class="secondary--text font-weight-bold px-4 py-4" style="font-size: 14px;">Add to Cart</v-btn>
-                </div>
-              </v-card-actions>
+                </v-card-actions>
+              </div>
             </v-col>
           </v-row>
         </v-card-text>
@@ -61,18 +162,7 @@
     </v-dialog>
 
     <!-- Cart Dialog -->
-    <v-dialog v-if="cart_dialog" v-model="cart_dialog" max-width="500">
-      <v-sheet class="pa-8">
-        <div class="headline font-weight-bold">Added to Cart</div>
-        <div class="mt-4">{{ product.name }} added to Cart</div>
-        <div class="mt-6 text-center">
-          <v-btn @click="cart_dialog = false" :block="$vuetify.breakpoint.xsOnly" outlined color="secondary" height="42"
-            class="primary--text dialog__btn font__11 font-weight-bold">CONTINUE SHOPPING</v-btn>
-          <v-btn to="/shop/cart" nuxt :block="$vuetify.breakpoint.xsOnly" depressed color="primary" height="42"
-            class="secondary--text dialog__btn font__11 font-weight-bold">VIEW CART AND CHECKOUT</v-btn>
-        </div>
-      </v-sheet>
-    </v-dialog>
+    <CartSidebar v-model="showCart" />
   </section>
 </template>
 
@@ -96,53 +186,39 @@
 .cursor__pointer {
   cursor: pointer;
 }
-
-.v-btn {
-  border-radius: 0 !important;
-}
-
-.inc__btn {
-  min-width: 20px !important;
-  width: 25px !important;
-  font-size: 1.2rem;
-  min-height: 20px !important;
-  height: 25px !important;
-}
-
-.quantity__box {
-  height: 50px;
-  width: 55px;
-  border: 1px solid grey;
-  text-align: center;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 </style>
 
 <script>
 import { mapState } from 'vuex'
+import CartSidebar from './Cart-Sidebar.vue'
 
 export default {
+  components: {
+    CartSidebar
+  },
+
   props: ['product'],
 
   data: () => ({
     quantity: 1,
     productModal: false,
-    cart_dialog: false,
+    showCart: false
   }),
 
   computed: {
-    ...mapState(['currency'])
+    ...mapState(['currency', 'cart']),
+
+    isCartEmpty() {
+      return this.$store.state.cart.length === 0
+    }
   },
 
   methods: {
-    inc() {
+    increase() {
       this.quantity++
     },
 
-    dec() {
+    decrease() {
       if (this.quantity > 1) {
         this.quantity--
       }
@@ -153,10 +229,16 @@ export default {
         product: this.product,
         quantity: this.quantity
       })
-      this.cart_dialog = true;
+      this.productModal = false // Close product modal
+      this.showCart = true // Open cart sidebar
     },
+
     openProductModal() {
-      this.productModal = true;
+      this.productModal = true
+    },
+
+    isProductInCart() {
+      return this.$store.getters.isProductInCart(this.product.id)
     }
   }
 }

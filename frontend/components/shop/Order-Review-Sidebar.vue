@@ -35,7 +35,7 @@
         </div>
         <div class="d-flex align-center mb-3" style="color: #57584E;">
           <v-icon size="20" class="mr-3">mdi-email-outline</v-icon>
-          {{ customerInfo?.email }}
+          {{ customerInfo?.email || '' }}
         </div>
         <div class="d-flex align-center" style="color: #57584E;">
           <v-icon size="20" class="mr-3">mdi-phone-outline</v-icon>
@@ -53,11 +53,11 @@
           class="d-flex justify-space-between mb-4"
         >
           <div style="color: #57584E;">
-            {{ item.product.name }} x {{ item.quantity }}
+            {{ item?.product?.name }} x {{ item?.quantity }}
           </div>
           <div style="color: #333333; font-weight: 600;">
             {{ currency === 'ngn' ? '₦' : '$'
-            }}{{ formatPrice(item.product.price * item.quantity) }}
+            }}{{ formatPrice(item?.product?.price * item?.quantity) }}
           </div>
         </div>
 
@@ -120,7 +120,7 @@
       <!-- Payment -->
       <paystack
         :amount="amount"
-        :email="customerInfo?.email"
+        :email="customerInfo?.email || ''"
         :firstname="customerInfo?.firstName"
         :lastname="customerInfo?.lastName"
         :channels="[
@@ -388,7 +388,7 @@ export default {
           reference: response.trxref,
           firstname: this.customerInfo?.firstName,
           lastname: this.customerInfo?.lastName,
-          email: this.customerInfo?.email,
+          email: this.customerInfo?.email || '',
           phone: this.customerInfo?.phone,
           state: this.customerInfo?.state,
           city: this.customerInfo?.city,

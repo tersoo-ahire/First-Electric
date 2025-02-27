@@ -4,7 +4,7 @@
       <div
         class="px-5 py-3"
         style="background-color: lightgray;"
-        :title="`View ${product.name}`"
+        :title="`View ${product?.name}`"
       >
         <v-img
           :src="product.thumbnail"
@@ -18,18 +18,18 @@
       <div class="d-flex flex-column justify-space-between">
         <div class="px-4 pb-4">
           <div
-            :title="`View ${product.name}`"
+            :title="`View ${product?.name}`"
             class="text-left font-weight-bold mt-4 text-truncate cursor__pointer"
             style="color: #333333; font-size:16px"
             @click="openProductModal"
           >
-            {{ product.name }}
+            {{ product?.name }}
           </div>
           <div
             class="text-left"
             style="color: #C23737; font-size: 14px; font-weight: 600;"
           >
-            {{ currency === 'ngn' ? '₦' : '$' }}{{ product.price | currency }}
+            {{ currency === 'ngn' ? '₦' : '$' }}{{ product?.price | currency }}
           </div>
         </div>
       </div>
@@ -49,11 +49,12 @@
               class="d-flex align-center pa-0 pb-4 pb-sm-0 pr-sm-8"
             >
               <v-img
-                :src="product.thumbnail"
+                :src="product?.thumbnail"
                 max-width="100%"
                 height="100%"
-                contain
+                cover
                 class="rounded-md"
+                style="max-height: 366px;"
               ></v-img>
             </v-col>
             <v-col cols="12" sm="5" class="d-flex flex-column pa-0">
@@ -61,7 +62,7 @@
                 <v-card-title
                   class="font-weight-bold text-h6 text-sm-h5 pa-0 mb-2 text-secondary"
                   style="color: #333333;"
-                  >{{ product.name }}</v-card-title
+                  >{{ product?.name }}</v-card-title
                 >
                 <div
                   class="font-weight-bold mb-1"
@@ -74,7 +75,7 @@
                 class="mb-6"
                 style="font-size: 15px; font-weight: 300; color: #333333;"
               >
-                {{ product.overview }}
+                {{ product?.overview }}
               </div>
               <div class="mb-6">
                 <div
@@ -106,14 +107,14 @@
                 </div>
                 <div style="color: #57584E; font-size: 16px; font-weight: 600;">
                   {{ currency === 'ngn' ? '₦' : '$'
-                  }}{{ product.price | currency }}
+                  }}{{ formatPrice(product?.price) | currency }}
                 </div>
               </div>
 
               <div style="display: flex; flex-direction: column; gap: 0;">
                 <!-- Add this condition to show "Item already added" message -->
                 <p
-                  v-if="isProductInCart(product.id)"
+                  v-if="isProductInCart(product?._id)"
                   class=""
                   style="color: #C23737; font-weight: 600; font-size: 12px;"
                 >
@@ -130,7 +131,7 @@
                       style="font-size: 14px;"
                     >
                       {{
-                        isProductInCart(product.id)
+                        isProductInCart(product?._id)
                           ? 'Update Cart'
                           : 'Add to Cart'
                       }}
@@ -214,6 +215,11 @@ export default {
   },
 
   methods: {
+    formatPrice(price) {
+      if (!price) return '0.00'
+      return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    },
+
     increase() {
       this.quantity++
     },
@@ -238,7 +244,7 @@ export default {
     },
 
     isProductInCart() {
-      return this.$store.getters.isProductInCart(this.product.id)
+      return this.$store.getters.isProductInCart(this.product._id)
     }
   }
 }

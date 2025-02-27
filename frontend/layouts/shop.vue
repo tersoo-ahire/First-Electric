@@ -1,13 +1,13 @@
 <template>
-<v-app id="shop__layout">
-  <Header />
+  <v-app id="shop__layout">
+    <Header />
 
-  <v-main class="bg">
-    <nuxt />
-  </v-main>
+    <v-main class="bg">
+      <nuxt />
+    </v-main>
 
-  <Footer />
-</v-app>
+    <Footer />
+  </v-app>
 </template>
 
 <style lang="scss" scoped>
@@ -31,14 +31,17 @@ import Footer from '@/components/footer/Footer'
 export default {
   components: {
     Header,
-    Footer
+    Footer,
   },
 
   created() {
-    this.$axios.$get('https://openexchangerates.org/api/latest.json?app_id=995e3ee88dc241409350c3223a4ef773&base=USD&symbols=NGN')
-    .then(response => {
-      this.$store.commit('SET_CONVERSION_RATE', response.rates.NGN)
-    })
-  },
+    this.$axios
+      .$get(
+        'https://openexchangerates.org/api/latest.json?app_id=995e3ee88dc241409350c3223a4ef773&base=USD&symbols=NGN'
+      )
+      .then(response => {
+        this.$store.commit('SET_CONVERSION_RATE', response.rates.NGN)
+      })
+  }
 }
 </script>

@@ -7,7 +7,7 @@
       <div v-if="products.length">
         <v-row class="mt-8">
           <v-col v-for="product in products" :key="product._id" cols="12" sm="4" md="3">
-            <ProductCard :product="product" />
+            <ProductCardOld :product="product" />
           </v-col>
         </v-row>
 
@@ -25,14 +25,14 @@
 </template>
 
 <script>
-import ProductCard from '@/components/shop/Product-Card'
+import ProductCardOld from '@/components/shop/Product-Card-Old.vue'
 import ShopShortHero from '@/components/banner/Shop-Short-Hero'
 
 export default {
   layout: 'shop',
 
   components: {
-    ProductCard,
+    ProductCardOld,
     ShopShortHero
   },
 

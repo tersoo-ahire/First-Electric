@@ -65,7 +65,7 @@
               :items="phoneCodes"
               outlined
               dense
-              hide-details
+              hide-details="auto"
               style="max-width: 120px"
             ></v-select>
             <v-text-field
@@ -84,10 +84,13 @@
         <div class="d-flex justify-space-between align-center mb-8">
           <div class="d-flex align-center">
             <v-icon color="#333333">mdi-shopping-outline</v-icon>
-            <span class="ml-2 font-weight-medium">{{ cartCount }}</span>
+            <span class="ml-2 font-weight-medium">
+              {{ formatPrice(cartCount) || 0 }}
+            </span>
           </div>
           <div class="font-weight-bold" style="color: #333333;">
-            {{ currency === 'ngn' ? '₦' : '$' }}{{ formatPrice(cartTotal) }}
+            {{ currency === 'ngn' ? '₦' : '$'
+            }}{{ formatPrice(cartTotal) || 0 }}
           </div>
         </div>
 
@@ -149,6 +152,7 @@ input {
 <script>
 import { mapState, mapGetters } from 'vuex'
 import phoneCodes from '~/locales/phoneCodes'
+// import { formatPrice } from '~/helpers/client'
 
 export default {
   name: 'CustomerInfoSidebar',
@@ -192,15 +196,18 @@ export default {
 
   methods: {
     formatPrice(price) {
-      return price ? price.toFixed(2) : '0.00'
+      if (!price) return '0.00'
+      return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
     },
 
     goBack() {
+      this.show = false
       this.$emit('back')
     },
 
     async handleSubmit() {
-      if (!this.$refs.form.validate()) return
+      const isValid = this.$refs.form.validate()
+      if (!isValid) return
 
       this.loading = true
       try {

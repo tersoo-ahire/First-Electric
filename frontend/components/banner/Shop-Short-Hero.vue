@@ -1,6 +1,6 @@
 <template>
 <section id="shop-short-hero">
-  <v-img src="/img/shop-banner.png" lazy-src="/img/shop-banner.png" class="bg">
+  <v-img src="/img/solar-banner.png" lazy-src="/img/solar-banner.png" class="bg">
     <v-container class="banner__content__container text-center">
       <h1 class="slide-in-bottom font-weight-bold white--text text-center banner__content">{{ title }}</h1>
 

@@ -7,6 +7,7 @@
       right
       width="485"
       class="cart-sidebar"
+      style="height: 100vh !important; position: fixed !important;"
     >
       <div class="pa-6" style="height: 100%;">
         <!-- Header -->
@@ -156,7 +157,17 @@
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cart-sidebar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+}
+</style>
 
 <script>
 import { mapState, mapGetters } from 'vuex'
@@ -204,6 +215,11 @@ export default {
   },
 
   methods: {
+    formatPrice(price) {
+      if (!price) return '0.00'
+      return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    },
+
     handleCheckout() {
       this.show = false // Close cart sidebar
       this.showCustomerInfo = true // Open customer info modal

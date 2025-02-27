@@ -22,7 +22,7 @@
 
       <v-row class="mt-8">
         <v-col v-for="product in new_products" :key="product._id" cols="12" sm="6" md="4" lg="3">
-          <ProductCard :product="product" />
+          <ProductCardOld :product="product" />
         </v-col>
       </v-row>
     </v-container>
@@ -46,7 +46,7 @@
 
       <v-row class="mt-8">
         <v-col v-for="(product, i) in featured_product" :key="i" cols="12" sm="6" md="4" lg="3">
-          <ProductCard :product="product" />
+          <ProductCardOld :product="product" />
         </v-col>
       </v-row>
     </v-container>
@@ -67,7 +67,7 @@
 </style>
 
 <script>
-import ProductCard from '@/components/shop/Product-Card'
+import ProductCardOld from '@/components/shop/Product-Card-Old'
 import SmallProductCard from '@/components/shop/Small-Product-Card'
 import ShopHero from '@/components/banner/Shop-Hero'
 
@@ -76,7 +76,7 @@ export default {
 
   components: {
     ShopHero,
-    ProductCard,
+    ProductCardOld,
     SmallProductCard
   },
 

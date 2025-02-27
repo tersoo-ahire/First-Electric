@@ -42,30 +42,31 @@ export const mutations = {
     }
   },
 
-  ADD_TO_CART(state, { product, quantity }) {
-    const existingItem = state.cart.find(
-      item => item?.product?.id === product?.id
-    )
+  ADD_TO_CART: (state, { product, quantity }) => {
+    const record = state.cart.find(p => p.id === product._id)
 
-    if (existingItem) {
-      existingItem.quantity += quantity
-    } else {
+    if (!record) {
       state.cart.push({
+        id: product._id,
         product: product,
         quantity
       })
+    } else {
+      record.quantity += quantity
     }
   },
 
   UPDATE_CART_QUANTITY(state, { product, quantity }) {
-    const item = state.cart.find(item => item?.product?.id === product?.id)
+    const item = state.cart.find(item => item?.product?._id === product?._id)
     if (item) {
       item.quantity = quantity
     }
   },
 
   REMOVE_FROM_CART(state, product) {
-    const index = state.cart.findIndex(item => item?.product.id === product?.id)
+    const index = state.cart.findIndex(
+      item => item?.product._id === product?._id
+    )
     if (index > -1) {
       state.cart.splice(index, 1)
     }
@@ -145,7 +146,7 @@ export const getters = {
     return state.cart.reduce((count, item) => count + item?.quantity, 0)
   },
 
-  isProductInCart: (state) => (productId) => {
-    return state.cart.some(item => item?.product?.id === productId || item?.product?._id === productId);
+  isProductInCart: state => productId => {
+    return state.cart.some(item => item?.product?._id === productId)
   }
 }

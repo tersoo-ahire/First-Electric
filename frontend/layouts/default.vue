@@ -1,13 +1,13 @@
 <template>
-<v-app id="default-layout">
-  <Header />
+  <v-app id="default-layout">
+    <Header />
 
-  <v-main class="white">
-    <nuxt />
-  </v-main>
+    <v-main class="white">
+      <nuxt />
+    </v-main>
 
-  <Footer />
-</v-app>
+    <Footer />
+  </v-app>
 </template>
 
 <style lang="scss" scoped>
@@ -27,7 +27,7 @@ import Footer from '@/components/footer/Footer'
 export default {
   components: {
     Header,
-    Footer
-  }
+    Footer,
+  },
 }
 </script>

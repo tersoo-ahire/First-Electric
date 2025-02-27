@@ -3,31 +3,53 @@
     <ShopShortHero :title="page_title" />
 
     <v-container class="boxed__container">
-      <v-row>
+      <v-row class="my-8">
         <v-col cols="12" md="9">
-          <v-sheet height="65" tile class="py-4 px-6 d-flex flex-wrap align-center" id="shop__filter">
+          <!-- <v-sheet
+            height="65"
+            tile
+            class="py-4 px-6 d-flex flex-wrap align-center"
+            id="shop__filter"
+          >
             <div class="d-flex align-center">
               <div class="mr-5 font-weight-medium">Sort by</div>
 
-              <v-select @change="sort_product" item-color="secondary" outlined flat :items="sort_items" item-text="name"
-                item-value="value" v-model="sort_item" hide-details="auto" />
+              <v-select
+                @change="sort_product"
+                item-color="secondary"
+                outlined
+                flat
+                :items="sort_items"
+                item-text="name"
+                item-value="value"
+                v-model="sort_item"
+                hide-details="auto"
+              />
             </div>
 
-            <!-- <div v-if="$vuetify.breakpoint.smAndUp" id="page__spec" class="d-flex align-center ml-10">
+            <div v-if="$vuetify.breakpoint.smAndUp" id="page__spec" class="d-flex align-center ml-10">
             <div class="mr-5 font-weight-medium">Show</div>
 
             <v-text-field outlined flat hide-details="auto" />
-          </div> -->
-          </v-sheet>
+          </div>
+          </v-sheet> -->
 
           <div v-if="!loading">
-            <v-row v-if="products.length" class="mt-8">
-              <v-col v-for="product in products" :key="product._id" cols="12" sm="6" md="4">
-                <ProductCard :product="product" />
+            <v-row v-if="products.length">
+              <v-col
+                v-for="product in products"
+                :key="product._id"
+                cols="12"
+                sm="6"
+                md="4"
+              >
+                <ProductCardOld :product="product" />
               </v-col>
             </v-row>
 
-            <div v-else class="title my-8 font-weight-medium blue--text">No product found under this category</div>
+            <div v-else class="title my-8 font-weight-medium blue--text">
+              No product found under this category
+            </div>
           </div>
 
           <v-overlay :value="loading">
@@ -35,8 +57,8 @@
           </v-overlay>
         </v-col>
 
-        <v-col cols="12" md="3">
-          <v-sheet height="65" tile dark class="py-4 px-6 d-flex flex-wrap align-center">
+        <!-- <v-col cols="12" md="3"> -->
+        <!-- <v-sheet height="65" tile dark class="py-4 px-6 d-flex flex-wrap align-center">
             <div class="title font-weight-bold">Filter by Price (₦)</div>
           </v-sheet>
 
@@ -57,45 +79,46 @@
             </div>
           </div>
 
-          <!-- <BrandFilter class="mt-8" /> -->
+          <BrandFilter class="mt-8" /> -->
 
-          <BestSellers class="mt-8" />
-        </v-col>
+        <!-- <BestSellers/> -->
+        <!-- </v-col> -->
       </v-row>
     </v-container>
   </main>
 </template>
 
 <script>
-import ProductCard from '@/components/shop/Product-Card'
+import ProductCardOld from '@/components/shop/Product-Card-Old'
 import BestSellers from '@/components/shop/Best-Sellers'
 import ShopShortHero from '@/components/banner/Shop-Short-Hero'
-import testProducts from "./test"
+// import testProducts from "./test"
 
 export default {
   layout: 'shop',
 
   components: {
-    ProductCard,
+    ProductCardOld,
     BestSellers,
     ShopShortHero
   },
 
   data: () => ({
-    // products: [],
-    products: testProducts,
+    products: [],
+    // products: testProducts,
     page_title: '',
     price_range: [20000, 500000],
     loading: false,
     btn_loading: false,
-    sort_items: [{
-      name: "Date",
-      value: 'recent'
-    },
-    {
-      name: "Popularity",
-      value: 'popularity'
-    }
+    sort_items: [
+      {
+        name: 'Date',
+        value: 'recent'
+      },
+      {
+        name: 'Popularity',
+        value: 'popularity'
+      }
     ],
     sort_item: 'recent'
   }),
@@ -104,31 +127,44 @@ export default {
     filter_by_price() {
       this.btn_loading = true
 
-      this.$axios.$get(`/products/filter-price/${this.$route.params.slug}?min=${this.price_range[0]}&max=${this.price_range[1]}`).then(response => {
-        this.products = response.data
-        this.btn_loading = false
-      }).catch(() => this.btn_loading = false)
+      this.$axios
+        .$get(
+          `/products/filter-price/${this.$route.params.slug}?min=${this.price_range[0]}&max=${this.price_range[1]}`
+        )
+        .then(response => {
+          this.products = response.data
+          this.btn_loading = false
+        })
+        .catch(() => (this.btn_loading = false))
     },
 
     sort_product() {
       this.loading = true
 
-      this.$axios.$get(`/products/category/${this.$route.params.slug}?page=1&perPage=9&sort=${this.sort_item}`).then(response => {
-        this.products = response.data.products
-        this.loading = false
-      }).catch(() => this.loading = false)
+      this.$axios
+        .$get(
+          `/products/category/${this.$route.params.slug}?page=1&perPage=9&sort=${this.sort_item}`
+        )
+        .then(response => {
+          this.products = response.data.products
+          this.loading = false
+        })
+        .catch(() => (this.loading = false))
     }
   },
 
   created() {
     this.loading = true
 
-    this.$axios.$get(`/products/category/${this.$route.params.slug}?page=1&perPage=9`).then(response => {
-      this.products = response.data.products
-      this.page_title = response.category.name
+    this.$axios
+      .$get(`/products/category/${this.$route.params.slug}?page=1&perPage=9`)
+      .then(response => {
+        this.products = response.data.products
+        this.page_title = response.category.name
 
-      this.loading = false
-    }).catch(() => this.loading = false)
-  },
+        this.loading = false
+      })
+      .catch(() => (this.loading = false))
+  }
 }
 </script>
